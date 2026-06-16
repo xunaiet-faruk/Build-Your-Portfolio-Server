@@ -24,14 +24,13 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // ডাটাবেজ কানেকশন (উৎপাদন পরিবেশে প্রোডাকশনের সুবিধার্থে সরাসরি টপ-লেভেলে হ্যান্ডেল করা ভালো)
+    
     await client.connect();
     console.log('Successfully connected to MongoDB!');
     
     const portfoliosCollection = client.db('portfolio').collection('projects');
 
-    // ----------------------------------------------------
-    // API ১: নতুন পোর্টফোলিও তৈরি করার এন্ডপয়েন্ট (POST)
+
     // ----------------------------------------------------
     app.post('/api/portfolio/create', async (req, res) => {
       try {
