@@ -4,7 +4,7 @@ const port = process.env.PORT || 5000;
 const cors = require('cors');
 require('dotenv').config();
 const dns = require('dns'); 
-const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb'); // ObjectId ইম্পোর্ট করা হয়েছে
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb'); 
 
 dns.setServers(['8.8.8.8', '8.8.4.4']);
 
